@@ -20,18 +20,18 @@ This will download all the required packages for the web site.
 
 `npm start`
 
-This will load a development server for node development on port 3000. The website will now function and it should be noted that the prolog api's can be used because of a proxy setting in the bands.react/package.json file which directs them to localhost:8008. 
+This will load a development server for node development on port 3000. The website will now function and it should be noted that the prolog api's can be used because of a proxy setting in the bands.react/package.json file which redirects to localhost:8008 where appropriate. 
 
 ## Creating a deployable package
 
-You can now browse the website as if it in live, but it is not, in order to create a package that can be moved around (and no longer relies on nodejs) then the following needs to be done. 
+You can now browse the website as if it in live, but it still relies on nodejs which is not good enough. In order to create a package that can be moved around (and no longer relies on nodejs) then the following needs to be done. 
 
 First build the production version of the website by typing: 
 
 `npm run build`
 
-This creates a build folder with the minified website. 
-- Create a `deploy` folder and copy the build folder into this.
+This creates the bands.react/build folder containing the minified website. 
+- Create a `deploy` folder somehwere and copy the bands.react/build folder into this.
 - Rename the build folder to `htdocs`.
 - Copy the contents of bands.prolog to the `deploy` folder. 
 - Stop the development prolog server so a test can be run. 
