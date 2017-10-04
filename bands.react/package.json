@@ -1,0 +1,23 @@
+{
+  "name": "bands.react",
+  "version": "0.1.0",
+  "private": true,
+  "root": "path.resolve('.')",
+  "dependencies": {
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "react-scripts": "1.0.14"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "fetch": "^1.1.0",
+    "material-ui": "^0.19.2",
+    "react-router-dom": "^4.2.2"
+  },
+  "proxy": "http://localhost:8008"
+}
