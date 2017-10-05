@@ -4,13 +4,9 @@ This is meant as a simple example of an application, not a production ready depl
 
 ## Setting up the development environment
 
-There are two parts to the development environment, SWI-Prolog and NodeJS. To run this demo I have installed node version 6.11.3 and SWI-Prolog version 7.6.0-rc2. So install them first. 
+There are two parts to the development environment, SWI-Prolog and NodeJS. To run this demo I have installed node version 6.11.3 and SWI-Prolog version 7.6.0-rc2, although the code should run on older versions.  
 
-The demo uses the regex library for SWI-Prolog so install that by opening SWI-Prolog and typing:
-
- `pack_install('regex')`.
-
-After that the server can be run by consulting the bands.prolog/server.pl file. The web server will load automatically running on port 8008. you can test this by browsing to: [http://localhost:8008/api/bands](http://localhost:8008/api/bands) and a json result with a list of bands will display if all is good. 
+The server can be run by consulting the bands.prolog/server.pl file. The web server will load automatically running on port 8008. you can test this by browsing to: [http://localhost:8008/api/bands](http://localhost:8008/api/bands) and a json result with a list of bands will display if all is good. 
 
 Next the node environment needs to be setup. To do this in a shell navigate to the bands.react folder and run the following commands (After nodejs has been installed). 
 

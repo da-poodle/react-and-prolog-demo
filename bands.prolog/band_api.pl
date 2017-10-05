@@ -4,7 +4,7 @@
 :- use_module(library(http/json_convert)).
 :- use_module(library(http/http_json)).
 :- use_module(library(http/http_parameters)).
-:- use_module(library(regex)).
+:- use_module(library(pcre)).
 
 % The web api handlers
 :- http_handler(root('api/bands'), band_list, []).
@@ -30,7 +30,8 @@ band_list(Request) :-
 	findall(
 	    band(Name, Year, Country),
 	    (
-		band(Name, Year, Country), Name =~ Match/i
+		band(Name, Year, Country),
+		re_match(Match/i, Name)
 	    ),
 	    Bands),
 
